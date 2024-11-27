@@ -1,0 +1,65 @@
+{
+    "name": "mpociot/vat-calculator",
+    "description": "EU VAT calculation, the way it should be.",
+    "keywords": ["VAT", "Tax", "EU MOSS", "VAT ID", "Tax calculation", "VAT calculation", "Cashier"],
+    "license": "MIT",
+    "funding": [
+        {
+            "type": "github",
+            "url": "https://github.com/sponsors/driesvints"
+        },
+        {
+            "type": "paypal",
+            "url": "https://www.paypal.com/paypalme/driesvints"
+        }
+    ],
+    "authors": [
+        {
+            "name": "Marcel Pociot",
+            "email": "m.pociot@gmail.com"
+        },
+        {
+            "name": "Dries Vints",
+            "homepage": "https://driesvints.com"
+        }
+    ],
+    "require": {
+        "php": "^7.3|~8.0.0|~8.1.0|~8.2.0|~8.3.0|~8.4.0",
+        "ext-json": "*",
+        "ext-soap": "*"
+    },
+    "require-dev": {
+        "illuminate/contracts": "^6.0|^7.0|^8.0|^9.0|^10.0|^11.0",
+        "mockery/mockery": "^1.3.3",
+        "orchestra/testbench": "^4.0|^5.0|^6.0|^7.0|^8.0|^9.0",
+        "phpunit/phpunit": "^9.5|^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mpociot\\VatCalculator\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "3.x-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Mpociot\\VatCalculator\\VatCalculatorServiceProvider"
+            ],
+            "aliases": {
+                "VatCalculator": "Mpociot\\VatCalculator\\Facades\\VatCalculator"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
